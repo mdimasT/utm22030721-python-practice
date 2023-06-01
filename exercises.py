@@ -69,3 +69,49 @@ if propertyName in dictionary:
 else:
     print("")
     print("Error: Property not found in the dictionary.")
+
+print("")
+print("______________________________________________________________________")
+print("")
+
+print("Exercise four: create a function named operation, that receives 3 parameters")
+print("")
+print("")
+
+# First we define the needed for the operation
+def operation(numberOne, operand, numberTwo):
+    if operand == '+':
+        result = numberOne + numberTwo
+    elif operand == '-':
+        result = numberOne - numberTwo
+    elif operand == '*':
+        result = numberOne * numberTwo
+    elif operand == '/':
+        if numberTwo != 0:
+            result = numberOne / numberTwo
+        else:
+            print("Error: Division by zero is not allowed.")
+            return None
+    else:
+        print("Error: Invalid operand.")
+        return None
+    return result
+
+
+# Perform operation
+# First we input the 3 parameters as indicated
+numberOne = int(input("Enter the first number: "))
+print("")
+operand = input("Enter the operand (+, -, *, /): ")
+print("")
+numberTwo = int(input("Enter the second number: "))
+print("")
+print("")
+
+# Then we show the results
+result = operation(numberOne, operand, numberTwo)
+if result is not None:
+    print("Result:", result)
+
+print("")
+print("______________________________________________________________________")
